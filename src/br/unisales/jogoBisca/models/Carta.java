@@ -35,4 +35,8 @@ public class Carta {
 		this.peso = peso;
 	}
 	
+	@Override
+	public String toString() {
+		return  face + " " + nype ;
+	}
 }
