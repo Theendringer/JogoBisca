@@ -103,4 +103,56 @@ class BaralhoTest {
 
 		assertEquals(11, j1.contarPontos());
 	}
+	@Test
+	void sabeComprarTresCartasOrdenadas() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		
+		assertEquals(11, j1.contarPontos());
+	}
+	
+	
+	@Test
+	void sabeComprarDezCartasOrdendas() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		
+		assertEquals(30, j1.contarPontos());
+	}
+	
+	@Test
+	void sabeComprarCartaAleatoria() {
+		Baralho b = new Baralho();
+		b.embaralhar();
+		Jogador j1 = new Jogador();
+		
+		j1.comprarCarta(b);
+		
+		assertNotEquals(11, j1.contarPontos());	
+	}
+	
+	@Test
+	void sabeComprarTodasCartas() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		
+		for(int i =0; i <= 39; i++) {
+			j1.comprarCarta(b);
+		}
+		
+		assertEquals(120, j1.contarPontos());
+	}
 }
