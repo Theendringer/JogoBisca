@@ -140,6 +140,12 @@ public class Programa {
 				j4.jogarCartaPosicao(pos);
 				j4.cartaJogada();
 			}
+
+            jogo.pontosRodada(j1, j2, j3, j4);
+			jogo.verificaRodada(j1, j2, j3, j4);
+			rodada += 1;
+			jogo.mostrarCartas(j1, j2, j3, j4);
+
 }
 	    
 	}
