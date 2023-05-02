@@ -1,5 +1,9 @@
 package br.unisales.jogoBisca.models;
+
+
 import java.util.ArrayList;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Iterator;
@@ -89,6 +93,43 @@ public void verificaRodada(Jogador j1, Jogador j2, Jogador j3, Jogador j4) {
 		pontosJ4 += pontosRodada(j1, j2, j3, j4);
 	}
 	
+}
+
+public String vencedor() {
+	if(pontosJ1 > pontosJ2 && pontosJ2 > pontosJ3 && pontosJ3 > pontosJ4) {
+		
+		System.out.println("Jogador 1 venceu!");
+		return "Jogador 1 venceu!";
+		
+	} else if (pontosJ2 > pontosJ3 && pontosJ3 > pontosJ4) {
+		
+		System.out.println("Jogador 2 venceu!");
+		return "Jogador 2 venceu!";
+		
+	} else if(pontosJ3 > pontosJ4) {
+		
+		System.out.println("Jogador 3 venceu!");
+		return "Jogador 3 venceu!";
+		
+	} else {
+		System.out.println("Jogador 4 venceu!");
+		return "Jogador 4 venceu!";
+	}
+}
+
+
+public void gerarArquivo() {
+	 File arquivo = new File("bisca.txt");
+	 
+	 try {
+           FileWriter escritor = new FileWriter(arquivo);
+           escritor.write("Pontos J1 = " + pontosJ1 +  "\n" + "Pontos J2 = " + pontosJ2 + "\n" + 
+           "Pontos J3 = " + pontosJ3 + "\n" + "Pontos J4 = " + pontosJ4 + "\n" + vencedor());
+           escritor.close();
+           System.out.println("Arquivo criado com sucesso!");
+       } catch (IOException e) {
+           System.out.println("Ocorreu um erro ao criar o arquivo: " + e.getMessage());
+       }
 }
 
 }
