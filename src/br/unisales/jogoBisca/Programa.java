@@ -145,6 +145,61 @@ public class Programa {
 			jogo.verificaRodada(j1, j2, j3, j4);
 			rodada += 1;
 			jogo.mostrarCartas(j1, j2, j3, j4);
+			
+			
+			
+		case 8:
+			System.out.println("Jogador 1, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j1.jogarCartaPosicao(pos);
+			
+			
+			System.out.println("Jogador 2, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j2.selecionarCartaPosicao(pos);
+			j2.cartaSelecionada();
+			if(j2.cartaSelecionada().getPeso() == 11 && j1.cartaJogada().getPeso() == 10) {
+				System.out.println("Ás não pode sair antes do 7");
+				System.out.println("Escolha outra carta");
+				pos = sc.nextInt();
+			} else {
+				j2.jogarCartaPosicao(pos);
+				j2.cartaJogada();
+			}
+			
+			
+			System.out.println("Jogador 3, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j3.selecionarCartaPosicao(pos);
+			j3.cartaSelecionada();
+			if(j3.cartaSelecionada().getPeso() == 11 && j2.cartaJogada().getPeso() == 10) {
+				System.out.println("Ás não pode sair antes do 7");
+				System.out.println("Escolha outra carta");
+				pos = sc.nextInt();
+			} else {
+				j3.jogarCartaPosicao(pos);
+				j3.cartaJogada();
+			}
+			
+
+			System.out.println("Jogador 4, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j4.selecionarCartaPosicao(pos);
+			j4.cartaSelecionada();
+			if(j4.cartaSelecionada().getPeso() == 11 && j3.cartaJogada().getPeso() == 10) {
+				System.out.println("Ás não pode sair antes do 7");
+				System.out.println("Escolha outra carta");
+				pos = sc.nextInt();
+			} else {
+				j4.jogarCartaPosicao(pos);
+				j4.cartaJogada();
+			}
+			
+
+			jogo.pontosRodada(j1, j2, j3, j4);
+			jogo.verificaRodada(j1, j2, j3, j4);
+			rodada += 1;	
+			jogo.mostrarCartas(j1, j2, j3, j4);
 
 }
 	    
