@@ -59,6 +59,15 @@ public class Jogador {
 	}
 	
 	public Carta cartaSelecionada() {
-		return selecionada;
+				return selecionada;
+		
+	}
+	public String mostrarCartas() {
+		//System.out.println(cartas.toString());
+		return cartas.toString();
+	}
+	
+	public void getCartasJogador() {
+		System.out.println(cartas.toString());
 	}
 }
