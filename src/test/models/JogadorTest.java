@@ -30,4 +30,22 @@ class JogadorTest {
 		
 	}
 	
+	@Test
+	void jogarSegundaTerceiraCarta() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		
+		
+		j1.jogarCartaPosicao(1);
+		j1.jogarCartaPosicao(1);
+		
+		
+		assertEquals(11, j1.contarPontos());
+		
+	}
+	
 }
