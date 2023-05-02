@@ -10,6 +10,16 @@ public class Programa {
 			
 		Baralho b = new Baralho();
 		b.embaralhar();
+		
+		
+		Jogador j1 = new Jogador();
+		Jogador j2 = new Jogador();
+		Jogador j3 = new Jogador();
+		Jogador j4 = new Jogador();
+			
+		Jogo jogo = new Jogo();
+
+	    //iniciar jogo e criar variveis de posição e rodada
 	    
 	}
 	
