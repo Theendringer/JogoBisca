@@ -78,10 +78,18 @@ public class Programa {
 				j4.cartaJogada();
 			}
 
-
-            rodada = i;
+			
+			rodada = i;
 			System.out.println(rodada);
-}
+			jogo.comprarCartas(b, j1, j2, j3, j4);
+			jogo.pontosRodada(j1, j2, j3, j4);
+			jogo.verificaRodada(j1, j2, j3, j4);
+			jogo.mostrarCartas(j1, j2, j3, j4);
+			//jogo.pontosRodada(j1, j2, j3, j4);
+			jogo.verificaRodada(j1, j2, j3, j4);
+			b.tamanhoMonte();
+			
+		}
 	    
 	}
 	

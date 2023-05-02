@@ -5,6 +5,14 @@ import java.util.List;
 import java.util.Iterator;
 
 public class Jogo {
+	
+	Carta trunfo;
+	private int pontosJ1; 
+	private int pontosJ2;
+	private int pontosJ3;
+	private int pontosJ4;
+	
+	
 	List<Carta> rodada;
 	public Jogo() {
 		super();
@@ -53,6 +61,34 @@ public void iniciaJogo(Baralho b, Jogador j1, Jogador j2, Jogador j3, Jogador j4
 	
 	mostrarCartas(j1, j2, j3, j4);
 
+}
+
+public int pontosRodada(Jogador j1, Jogador j2, Jogador j3, Jogador j4) {
+	int pontos = j1.cartaJogada().getPeso() + j2.cartaJogada().getPeso() + j3.cartaJogada().getPeso() + j4.cartaJogada().getPeso();
+	return pontos;
+}
+
+
+public void verificaRodada(Jogador j1, Jogador j2, Jogador j3, Jogador j4) {
+	
+	if(j1.cartaJogada().getPeso() >= j2.cartaJogada().getPeso() && j2.cartaJogada().getPeso() >= j3.cartaJogada().getPeso() 
+			&& j3.cartaJogada().getPeso() >= j4.cartaJogada().getPeso())  {
+		
+		pontosJ1 += pontosRodada(j1, j2, j3, j4);
+		
+	} else if(j2.cartaJogada().getPeso() >= j1.cartaJogada().getPeso() && j2.cartaJogada().getPeso() >= j3.cartaJogada().getPeso() &&
+			j3.cartaJogada().getPeso() >= j4.cartaJogada().getPeso()){
+		
+		pontosJ2 += pontosRodada(j1, j2, j3, j4);
+		
+	}else if(j3.cartaJogada().getPeso() >= j1.cartaJogada().getPeso() && j3.cartaJogada().getPeso() >= j2.cartaJogada().getPeso() &&
+			j3.cartaJogada().getPeso() >= j4.cartaJogada().getPeso()) {
+		
+		pontosJ3 += pontosRodada(j1, j2, j3, j4);
+	} else {
+		pontosJ4 += pontosRodada(j1, j2, j3, j4);
+	}
+	
 }
 
 }
