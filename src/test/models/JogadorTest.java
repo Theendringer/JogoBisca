@@ -12,5 +12,22 @@ import br.unisales.jogoBisca.models.Jogador;
 
 class JogadorTest {
 
+	@Test
+	void jogarPrimeiraSegundaCarta() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		
+		
+		j1.jogarCartaPosicao(0);
+		j1.jogarCartaPosicao(1);
+		
+		
+		assertEquals(0, j1.contarPontos());
+		
+	}
 	
 }
