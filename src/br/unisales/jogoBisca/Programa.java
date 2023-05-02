@@ -20,6 +20,12 @@ public class Programa {
 		Jogo jogo = new Jogo();
 
 	    //iniciar jogo e criar variveis de posição e rodada
+		
+		
+		jogo.iniciaJogo(b, j1, j2, j3, j4);
+		
+		int pos;
+		int rodada = 0;
 	    
 	}
 	
