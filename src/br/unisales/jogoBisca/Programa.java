@@ -26,6 +26,32 @@ public class Programa {
 		
 		int pos;
 		int rodada = 0;
+		
+		
+		for(int i=0; i<=6;i++) {
+			System.out.println("Jogador 1, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j1.jogarCartaPosicao(pos);
+			j1.cartaJogada();
+
+
+            System.out.println("Jogador 2, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j2.jogarCartaPosicao(pos);
+			j2.cartaJogada();
+
+
+            System.out.println("Jogador 3, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j3.jogarCartaPosicao(pos);
+			j3.cartaJogada();
+
+
+            System.out.println("Jogador 4, qual carta deseja jogar?");
+			pos = sc.nextInt();
+			j4.jogarCartaPosicao(pos);
+			j4.cartaJogada();
+}
 	    
 	}
 	
