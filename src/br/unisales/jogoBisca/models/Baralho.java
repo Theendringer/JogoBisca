@@ -2,6 +2,7 @@ package br.unisales.jogoBisca.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Baralho {
 
@@ -80,6 +81,18 @@ public class Baralho {
 	public void embaralhar() {
 		this.ehEmbaralhar = true;
 
+	}
+	public String getCarta(Carta c) {		
+		return c.toString();
+	}
+	
+
+	public Carta sortearTrunfo() { 
+		
+		Random random = new Random();
+		int sort = random.nextInt(40);
+		Carta c = this.monte.get(sort);
+		return c;	
 	}
 	
 }
