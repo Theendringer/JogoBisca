@@ -155,4 +155,17 @@ class BaralhoTest {
 		
 		assertEquals(120, j1.contarPontos());
 	}
+	@Test
+	void doisJogadoresComprandoCartaOrdenadasDiferentes() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		Jogador j2 = new Jogador();
+		
+		j1.comprarCarta(b);
+		j2.comprarCarta(b);
+		
+		assertEquals(11, j1.contarPontos());
+		assertEquals(0, j2.contarPontos());
+		
+	}
 }
