@@ -35,4 +35,17 @@ public class Jogador {
 	}
 		
 	
+	public void getCarta() {
+		cartas.get(0);
+	}
+	
+	public Carta jogarCarta() {
+		return cartas.get(0);
+	}
+	
+	
+	public void jogarCartaPosicao(int pos) {	
+		jogada = cartas.get(pos);
+		cartas.remove(pos);
+	}
 }
