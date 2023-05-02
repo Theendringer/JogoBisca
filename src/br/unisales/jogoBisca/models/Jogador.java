@@ -48,4 +48,13 @@ public class Jogador {
 		jogada = cartas.get(pos);
 		cartas.remove(pos);
 	}
+	
+	public Carta cartaJogada() {
+		System.out.println(jogada);
+		return jogada;
+	}
+	
+	public void selecionarCartaPosicao(int pos) {	
+		selecionada = cartas.get(pos);
+	}
 }
