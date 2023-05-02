@@ -168,4 +168,16 @@ class BaralhoTest {
 		assertEquals(0, j2.contarPontos());
 		
 	}
+	@Test
+	void doisJogadoresComprandoCartasDiferentesEmbaralhado() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		Jogador j2 = new Jogador();
+		b.embaralhar();
+		
+		j1.comprarCarta(b);
+		j2.comprarCarta(b);
+		
+		assertNotEquals(j2.contarPontos(), j1.contarPontos());
+	}
 }
