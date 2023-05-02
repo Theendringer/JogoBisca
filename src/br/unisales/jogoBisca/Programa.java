@@ -254,6 +254,8 @@ public class Programa {
 			jogo.mostrarCartas(j1, j2, j3, j4);
 
 }
+		
+		jogo.gerarArquivo();
 	    
 	}
 	
