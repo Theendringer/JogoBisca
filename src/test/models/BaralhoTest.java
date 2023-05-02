@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import br.unisales.jogoBisca.models.Baralho;
 import br.unisales.jogoBisca.models.Carta;
+import br.unisales.jogoBisca.models.Jogador;
 
 class BaralhoTest {
 
@@ -94,5 +95,12 @@ class BaralhoTest {
 
 		assertEquals(null, b.comprarCarta());
 	}
+	@Test
+	void sabeComprarAprimeiraCartaOrdenada() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		j1.comprarCarta(b);
 
+		assertEquals(11, j1.contarPontos());
+	}
 }
