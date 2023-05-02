@@ -57,4 +57,8 @@ public class Jogador {
 	public void selecionarCartaPosicao(int pos) {	
 		selecionada = cartas.get(pos);
 	}
+	
+	public Carta cartaSelecionada() {
+		return selecionada;
+	}
 }
