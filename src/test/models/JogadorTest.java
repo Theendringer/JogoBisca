@@ -73,4 +73,29 @@ class JogadorTest {
 		
 	}
 	
+	void quatroJogadoresComprandoCartasDiferentesEmbaralhado() {
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		Jogador j2 = new Jogador();
+		Jogador j3 = new Jogador();
+		Jogador j4 = new Jogador();
+		b.embaralhar();
+		
+		j1.comprarCarta(b);
+		j2.comprarCarta(b);
+		j3.comprarCarta(b);
+		j4.comprarCarta(b);
+		
+		assertNotEquals(j1.contarPontos(), j2.contarPontos());
+		assertNotEquals(j1.contarPontos(), j3.contarPontos());
+		assertNotEquals(j1.contarPontos(), j4.contarPontos());
+		
+		assertNotEquals(j2.contarPontos(), j3.contarPontos());
+		assertNotEquals(j2.contarPontos(), j4.contarPontos());
+		
+		
+		assertNotEquals(j3.contarPontos(), j4.contarPontos());
+		
+	}
+	
 }
