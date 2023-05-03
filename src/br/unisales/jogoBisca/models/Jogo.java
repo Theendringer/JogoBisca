@@ -15,4 +15,13 @@ public class Jogo {
 		System.out.println(trunfo);
 	}
 	
+public void comprarCartas(Baralho b, Jogador j1, Jogador j2, Jogador j3, Jogador j4) {
+		
+		j1.comprarCarta(b);
+		j2.comprarCarta(b);
+		j3.comprarCarta(b);
+		j4.comprarCarta(b);
+		
+	}
+	
 }
