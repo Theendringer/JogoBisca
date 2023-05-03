@@ -23,5 +23,10 @@ public void comprarCartas(Baralho b, Jogador j1, Jogador j2, Jogador j3, Jogador
 		j4.comprarCarta(b);
 		
 	}
+
+public void mostrarCartas(Jogador j1, Jogador j2, Jogador j3, Jogador j4) {
+	System.out.println("Cartas J1 = " + j1.mostrarCartas() + "  " + "Cartas J2 = " + j2.mostrarCartas() + "\n" + "Cartas J3 = "
+			+ j3.mostrarCartas() + "  " + "Cartas J4 = " + j4.mostrarCartas());	
+}
 	
 }
