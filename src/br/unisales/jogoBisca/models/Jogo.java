@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Iterator;
 
 public class Jogo {
@@ -17,6 +18,12 @@ public class Jogo {
 	private int pontosJ2;
 	private int pontosJ3;
 	private int pontosJ4;
+	
+	
+	ArrayList<Integer> jogo = new ArrayList<Integer>();
+	
+	
+	int sete = 0;
 	
 	
 	List<Carta> rodada;
@@ -132,6 +139,60 @@ public void gerarArquivo() {
        } catch (IOException e) {
            System.out.println("Ocorreu um erro ao criar o arquivo: " + e.getMessage());
        }
+}
+
+
+
+public void verificaSete(Jogador jogador) {
+	
+	if(jogador.cartaSelecionada().getPeso() == 10) {
+		sete = 1;
+	}
+
+}
+
+
+public void verificaAs(Jogador jogador) {
+	
+	if(jogador.cartaSelecionada().getPeso() == 11 && sete != 1) {
+		
+	}
+	
+	
+}
+
+public void jogada(Jogador jogador) {
+	
+	
+	
+	Scanner sc = new Scanner(System.in);
+	
+	int pos = sc.nextInt();
+	
+	jogador.selecionarCartaPosicao(pos);
+	jogador.cartaSelecionada();
+	
+	verificaSete(jogador);
+	
+	if(jogador.cartaSelecionada().getPeso() == 11 && sete != 1) {
+		
+		System.out.println("Ás não pode sair antes do 7");
+		System.out.println("Jogue outra carta.");
+		
+		pos = sc.nextInt();
+		jogador.jogarCartaPosicao(pos);
+		jogador.cartaJogada();
+		
+	}else {
+		jogador.jogarCartaPosicao(pos);
+		jogador.cartaJogada();
+	}
+	
+	
+	
+	
+	
+	
 }
 
 }
