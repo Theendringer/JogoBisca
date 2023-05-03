@@ -206,4 +206,10 @@ class BaralhoTest {
 		
 		assertNotEquals(11, j1.contarPontos());
 	}
+	
+	@Test
+	void trunfo() {
+		Baralho b = new Baralho();
+		assertNotEquals(11, b.sortearTrunfo().getPeso());
+	}
 }
