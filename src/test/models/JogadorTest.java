@@ -194,4 +194,25 @@ class JogadorTest {
 		
 	}
 	
+	@Test
+	void testeJogadas() {
+		
+		Baralho b = new Baralho();
+		Jogador j1 = new Jogador();
+		
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		j1.comprarCarta(b);
+		
+		//Lembrar que quando remove a carta, o array diminui
+		j1.jogarCartaPosicao(1);
+		
+		assertEquals(10, j1.contarPontos());
+		
+	}
+	
 }
