@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Jogador {
 	List<Carta> cartas;
-	//List<Carta> cartaJogada;
 	Carta jogada;
 	Carta selecionada;
 
@@ -20,17 +19,13 @@ public class Jogador {
 	public void comprarCarta(Baralho b) {
 		Carta c = b.comprarCarta();
 		cartas.add(c);
-		
-		//System.out.println(c.toString());
 	}
 
 	public int contarPontos() {
 		int acc = 0;
 		for (Carta carta : cartas) {
-			acc += carta.getPeso(); // acc = acc + carta.getPeso();
+			acc += carta.getPeso();
 		}
-		
-		//System.out.println(acc);//teste 
 		return acc;
 	}
 		
@@ -63,7 +58,6 @@ public class Jogador {
 		
 	}
 	public String mostrarCartas() {
-		//System.out.println(cartas.toString());
 		return cartas.toString();
 	}
 	
