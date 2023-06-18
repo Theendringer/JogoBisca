@@ -165,9 +165,9 @@ public void jogada(Jogador jogador) {
 	
 	
 	
-	Scanner sc = new Scanner(System.in);
 	
-	int pos = sc.nextInt();
+	
+	int pos = 0;
 	
 	jogador.selecionarCartaPosicao(pos);
 	jogador.cartaSelecionada();
@@ -179,7 +179,7 @@ public void jogada(Jogador jogador) {
 		System.out.println("Ás não pode sair antes do 7");
 		System.out.println("Jogue outra carta.");
 		
-		pos = sc.nextInt();
+		pos = 0;
 		jogador.jogarCartaPosicao(pos);
 		jogador.cartaJogada();
 		
