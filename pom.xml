@@ -21,10 +21,18 @@
             <version>3.0.0-M5</version>
         </plugin>
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <version>3.3.0</version>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.3.0</version>
+    <configuration>
+        <resources>
+            <resource>
+                <directory>src/test/models/</directory>
+            </resource>
+        </resources>
+    </configuration>
+</plugin>
+        
     </plugins>
 </build>
 
