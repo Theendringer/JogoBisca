@@ -13,7 +13,7 @@ pipeline {
         }
         
     }
-    port {
+    post {
         always {
             junit (
                 allowEmptyResults:true,
