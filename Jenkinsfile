@@ -31,6 +31,7 @@ pipeline {
                             <p>Por favor, verifique os detalhes abaixo:</p>
                             <pre>Testes falhos</pre>''',
                      subject: 'Falha nos testes - Pipeline',
+                     from: 'gustepereira@hotmail.com'
                      to: 'gustepereira@gmail.com'
 
         }
