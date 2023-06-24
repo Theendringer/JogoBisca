@@ -1,3 +1,4 @@
+<project>
 <dependencies> 
     <dependency>
         <groupId>junit</groupId>
@@ -18,5 +19,5 @@
         </plugin>
     </plugins>
 </build>
-
+</project>
 
