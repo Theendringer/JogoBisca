@@ -26,14 +26,13 @@ pipeline {
             echo 'Todos os testes passaram! O projeto foi compilado e testado com sucesso.'
         }
         failure {
-           failure {
             emailext body: '''<p>Olá,</p>
                             <p>Um ou mais testes falharam na execução da pipeline.</p>
                             <p>Por favor, verifique os detalhes abaixo:</p>
                             <pre>Testes falhos</pre>''',
                      subject: 'Falha nos testes - Pipeline',
                      to: 'gustepereira@gmail.com'
-        }
+
         }
     }
 }
