@@ -30,7 +30,7 @@ pipeline {
             emailext body: '''<p>Olá,</p>
                             <p>Um ou mais testes falharam na execução da pipeline.</p>
                             <p>Por favor, verifique os detalhes abaixo:</p>
-                            <pre>${JUNIT_TEST_RESULT}</pre>''',
+                            <pre>Testes falhos</pre>''',
                      subject: 'Falha nos testes - Pipeline',
                      to: 'gustepereira@gmail.com'
         }
