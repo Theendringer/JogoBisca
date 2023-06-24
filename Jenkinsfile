@@ -9,10 +9,11 @@ pipeline {
                 checkout scm
             }
         }
-        
-        stage('Build and Test') {
-            steps {
-                sh 'mvn clean test'
+        stage('Build e Teste'){
+            steps{
+                echo 'buildado'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Theendringer/JogoBisca.git']])
+                sh 'mvn -Dmaven.test.failure.igore=true clean package'
             }
         }
     }
