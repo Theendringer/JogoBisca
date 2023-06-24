@@ -18,7 +18,8 @@ pipeline {
     }
     post {
         always {
-            junit 'src/br/test/model/target/surefire-reports/*.xml'
+            junit 'src/test/models/target/surefire-reports/*.xml'
+
         }
         success {
             echo 'Todos os testes passaram! O projeto foi compilado e testado com sucesso.'
