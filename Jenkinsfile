@@ -13,13 +13,17 @@ pipeline {
         }
         
     }
-    post {
+   post {
         always {
-            junit (
-                allowEmptyResults:true,
-                testResults: '*teste-reports/.xml'
-
-            )
+            junit 'target/surefire-reports/*.xml'
+        }
+        
+        success {
+            echo 'Todos os testes passaram! O projeto foi compilado e testado com sucesso.'
+        }
+        
+        failure {
+            echo 'Alguns testes falharam! O projeto não foi compilado ou apresentou falhas nos testes.'
         }
     }
 }
