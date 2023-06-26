@@ -13,7 +13,7 @@ pipeline {
             steps{
                 echo 'buildado'
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Theendringer/JogoBisca.git']])
-                sh 'mvn -Dmaven.test.failure.igore=true clean package'
+                sh 'mvn -Dmaven.test.failure.igore=false clean package'
             }
         }
     }
