@@ -26,11 +26,6 @@
     <version>3.3.0</version>
     <configuration>
     <encoding>UTF-8</encoding>
-        <resources>
-            <resource>
-                <directory>src/test/models/</directory>
-            </resource>
-        </resources>
     </configuration>
 </plugin>
         
