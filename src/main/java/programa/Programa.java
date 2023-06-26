@@ -1,4 +1,3 @@
-package br.unisales.jogoBisca;
 import java.util.Scanner;
 import br.unisales.jogoBisca.models.*;
 
