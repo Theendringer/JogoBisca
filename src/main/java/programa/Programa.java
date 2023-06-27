@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import br.unisales.jogoBisca.models.*;
 
 public class Programa {
 	
